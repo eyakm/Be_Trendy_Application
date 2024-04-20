@@ -1,0 +1,15 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#010101"
+  image: assets/logos/Bt-store-splash-logo-black.png
+  image_dark: assets/logos/Bt-store-splash-logo-white.png
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#010101"
+    image: assets/logos/Bt-store-splash-logo-black.png
+    image_dark: assets/logos/Bt-store-splash-logo-white.png
+
+  web: false
+  # to remove this splash screen, just tap this command on the terminal : " flutter pub run flutter_native_splash:remove "
+  # to save this yaml file : flutter pub run flutter_native_splash:create --path=splash.yaml

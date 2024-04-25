@@ -1,4 +1,4 @@
-import 'package:be_trendy/features/shop/screens/widgets/home.dart';
+import 'package:be_trendy/features/shop/screens/home/home.dart';
 import 'package:be_trendy/utils/constants/colors.dart';
 import 'package:be_trendy/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';

@@ -1,6 +1,4 @@
 import 'package:be_trendy/common/styles/spacing_styles.dart';
-import 'package:be_trendy/common/widgets.login_signup/form_divider.dart';
-import 'package:be_trendy/common/widgets.login_signup/social_buttons.dart';
 import 'package:be_trendy/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:be_trendy/features/authentication/screens/signup.widgets/signup.dart';
 import 'package:be_trendy/navigation_menu.dart';
@@ -10,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../common/widgets/login_signup/form_divider.dart';
+import '../../../../common/widgets/login_signup/social_buttons.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';

@@ -40,6 +40,7 @@ dependencies:
   logger: ^2.0.1
   url_launcher: ^6.1.12
   flutter_native_splash: ^2.3.11
+  carousel_slider: ^4.2.1
 
 
   #Icons
@@ -81,7 +82,11 @@ flutter:
   assets:
     - assets/
     - assets/logos/
+    - assets/icons/brands/
+    - assets/icons/categories/
     - assets/images/
+    - assets/images/animations/
+    - assets/images/banners/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

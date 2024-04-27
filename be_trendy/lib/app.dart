@@ -1,10 +1,9 @@
 import 'package:be_trendy/utils/theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'OnBoarding/Onboarding_view.dart';
-import 'home.dart';
+
 
 class App extends StatelessWidget {
   final bool onboarding;

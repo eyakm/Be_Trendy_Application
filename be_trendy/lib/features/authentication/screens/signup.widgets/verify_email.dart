@@ -27,12 +27,12 @@ class VerifyEmailScreen extends StatelessWidget {
       body: SingleChildScrollView(
 // Padding to Give Default Equal Space on all sides in all screens.
         child: Padding(
-          padding: EdgeInsets.all(BTSizes.defaultSpace),
+          padding: const EdgeInsets.all(BTSizes.defaultSpace),
           child: Column(
             children: [
               /// Image
               Image(
-                  image: AssetImage(BTImages.staticSuccessIllustration),
+                  image: const AssetImage(BTImages.staticSuccessIllustration),
                   width: BTHelperFunctions.screenWidth() * 0.6,
               ),
               const SizedBox(height: BTSizes.spaceBtwSections),

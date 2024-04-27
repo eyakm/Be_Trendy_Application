@@ -1,13 +1,6 @@
-import 'package:be_trendy/app.dart';
-import 'package:be_trendy/common/styles/spacing_styles.dart';
 import 'package:be_trendy/features/authentication/screens/signup.widgets/signup_form.dart';
-import 'package:be_trendy/utils/constants/colors.dart';
-import 'package:be_trendy/utils/constants/image_strings.dart';
-import 'package:be_trendy/utils/helpers/helper_functions.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../common/widgets/login_signup/social_buttons.dart';
@@ -24,7 +17,7 @@ class SignupScreen extends StatelessWidget{
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(BTSizes.defaultSpace)/*BTSpacingStyle.paddingWithAppBarHeight*/,
+          padding: const EdgeInsets.all(BTSizes.defaultSpace)/*BTSpacingStyle.paddingWithAppBarHeight*/,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -33,7 +26,7 @@ class SignupScreen extends StatelessWidget{
               const SizedBox(height: BTSizes.spaceBtwSections),
 
               /// Form
-              BTSignupForm(),
+              const BTSignupForm(),
 
               //Divider
               BTFormDivider(divideText: BTTexts.orSignUpWith.capitalize!),

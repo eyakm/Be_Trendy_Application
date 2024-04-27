@@ -1,6 +1,4 @@
-import 'package:be_trendy/Components/color.dart';
 import 'package:be_trendy/features/authentication/screens/signup.widgets/verify_email.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -95,13 +93,13 @@ class BTSignupForm extends StatelessWidget {
                 Text.rich(
                   TextSpan(
                       children: [
-                        TextSpan(text: '${BTTexts.iAgreeTo}', style: Theme.of(context).textTheme.bodySmall),
+                        TextSpan(text: BTTexts.iAgreeTo, style: Theme.of(context).textTheme.bodySmall),
                         TextSpan(text: '${BTTexts.privacyPolicy} ', style: Theme.of(context).textTheme.bodyMedium!.apply(
                           color: dark ? BTColors.white : BTColors.primary,
                           decoration: TextDecoration.underline,
                           decorationColor: dark ? BTColors.white : BTColors.primary,
                         )),
-                        TextSpan(text: '${BTTexts.and}', style: Theme.of(context).textTheme.bodySmall),
+                        TextSpan(text: BTTexts.and, style: Theme.of(context).textTheme.bodySmall),
                         TextSpan(text: BTTexts.termsofUse, style: Theme.of(context).textTheme.bodyMedium!.apply(
                           color: dark ? BTColors.white : BTColors.primary,
                           decoration: TextDecoration.underline,

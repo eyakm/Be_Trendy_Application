@@ -1,13 +1,10 @@
-import 'package:be_trendy/app.dart';
 import 'package:flutter/material.dart';
 
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../Components/color.dart';
 import '../features/authentication/screens/login.widgets/login.dart';
-import '../home.dart';
 import '../utils/constants/colors.dart';
 import '../utils/helpers/helper_functions.dart';
 import 'Onboarding_items.dart';
@@ -113,7 +110,7 @@ class _OnboardingViewState extends State<OnboardingView> {
             //After we press get started button this onboarding value become true
             // same key
             if(!mounted)return;
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginScreen()));
           },
           child: const Text("Get started",style: TextStyle(color: Colors.white),)),
     );

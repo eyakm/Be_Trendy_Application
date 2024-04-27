@@ -17,27 +17,24 @@ class BTPrimaryHeaderContainer extends StatelessWidget {
     return BTCurvedEdgeWidget(
 
         //padding: const EdgeInsets.all(0),
-        child: SizedBox(
-          height: 400,
-          child: Container(
-            color: BTColors.primaryColor,
-            child: Stack(
-          // to stack widgets vertically on top of each others
-              children: [
-                Positioned(
-                    top: -150,
-                    right: -250,
-                    child: BTCircularContainer(
-                        backgroundColor: BTColors.textWhite.withOpacity(0.1))),
-                Positioned(
-                    top: -100,
-                    right: -300,
-                    child: BTCircularContainer(
-                        backgroundColor: BTColors.textWhite.withOpacity(0.1))),
-                child,
-              ],
-        ),
-      ),
-    ));
+        child: Container(
+          color: BTColors.primaryColor,
+          child: Stack(
+        // to stack widgets vertically on top of each others
+            children: [
+              Positioned(
+                  top: -150,
+                  right: -250,
+                  child: BTCircularContainer(
+                      backgroundColor: BTColors.textWhite.withOpacity(0.1))),
+              Positioned(
+                  top: -100,
+                  right: -300,
+                  child: BTCircularContainer(
+                      backgroundColor: BTColors.textWhite.withOpacity(0.1))),
+              child,
+            ],
+                ),
+              ));
   }
 }

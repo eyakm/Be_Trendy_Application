@@ -1,6 +1,5 @@
 
 
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -53,7 +52,7 @@ class BTColors{
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
 //010101
-  static const Color darkest = Color(000000);
+  static const Color darkest = Color(0x00000000);
 
 
 }

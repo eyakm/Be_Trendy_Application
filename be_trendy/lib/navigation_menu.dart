@@ -1,13 +1,13 @@
 import 'package:be_trendy/features/shop/screens/home/home.dart';
+import 'package:be_trendy/features/shop/screens/wishlist/wishlist.dart';
 import 'package:be_trendy/utils/constants/colors.dart';
 import 'package:be_trendy/utils/helpers/helper_functions.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:iconsax/iconsax.dart';
 
-import 'main.dart';
+import 'features/personalization/screens/settings/settings.dart';
+import 'features/shop/screens/store/store.dart';
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
 
@@ -46,5 +46,5 @@ class NavigationController extends GetxController{
   final Rx<int> selectedIndex = 0.obs; // whenever is going to change this 0 its going to change whatever in this obx => all that is thanks to state management Getx
 
   // creation of 4 widgets as a screen
-  final screens = [const HomeScreen(),Container(color: Colors.purple),Container(color: Colors.orange),Container(color: Colors.blue),];
+  final screens = [const HomeScreen(),const StoreScreen(),const FavouriteScreen(),const SettingsScreen(),];
 }

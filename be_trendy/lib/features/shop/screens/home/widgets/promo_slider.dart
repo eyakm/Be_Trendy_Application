@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 
 import '../../../../../common/widgets/custom_shapes/containers/circular_container.dart';
 import '../../../../../common/widgets/images/BT_rounded_image.dart';
-import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 
 class BTPromoSlider extends StatelessWidget {
@@ -38,7 +37,7 @@ class BTPromoSlider extends StatelessWidget {
                   BTCircularContainer(
                     width: 20,
                     height: 4,
-                    margin:  EdgeInsets.only(right: 10),
+                    margin:  const EdgeInsets.only(right: 10),
                     backgroundColor: controller.carouselCurrentIndex.value == i
                         ? BTColors.primary
                         : BTColors.grey,

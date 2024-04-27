@@ -36,7 +36,7 @@ dependencies:
 
   #utility Packages
   http: ^1.1.0
-  intl: ^0.18.1
+  intl: ^0.19.0
   logger: ^2.0.1
   url_launcher: ^6.1.12
   flutter_native_splash: ^2.3.11
@@ -65,7 +65,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -85,8 +85,17 @@ flutter:
     - assets/icons/brands/
     - assets/icons/categories/
     - assets/images/
+    - assets/images/content/
     - assets/images/animations/
     - assets/images/banners/
+    - assets/images/products/
+    - assets/images/products/accessory/
+    - assets/images/products/dresses/
+    - assets/images/products/sports/
+    - assets/images/products/cosmetics/
+    - assets/images/products/shoes/
+    - assets/images/products/shirts/
+    - assets/images/products/kids/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

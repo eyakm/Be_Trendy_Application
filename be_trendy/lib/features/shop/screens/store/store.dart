@@ -2,7 +2,6 @@
 import 'package:be_trendy/common/widgets/appbar/appbar.dart';
 import 'package:be_trendy/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:be_trendy/common/widgets/layouts/grid_layout.dart';
-import 'package:be_trendy/common/widgets/products.cart/cart_menu_icon.dart';
 import 'package:be_trendy/common/widgets/texts/section_heading.dart';
 import 'package:be_trendy/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:be_trendy/utils/constants/colors.dart';
@@ -12,6 +11,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/appbar/tabbar.dart';
 import '../../../../common/widgets/brands/BT_Brand_Card.dart';
+import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});

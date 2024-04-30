@@ -6,9 +6,9 @@ import '../../../utils/constants/image_strings.dart';
 import '../images/BT_circular_image.dart';
 class BTUserProfileTile extends StatelessWidget {
   const BTUserProfileTile({
-    super.key,
+    super.key, required this.onPressed,
   });
-
+final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -20,7 +20,7 @@ class BTUserProfileTile extends StatelessWidget {
       ),
       title:Text("Eya Kammoun", style: Theme.of(context).textTheme.headlineSmall!.apply(color: BTColors.white)),
       subtitle:Text("eyakammoun20@gmail.com", style: Theme.of(context).textTheme.bodyMedium!.apply(color: BTColors.white)),
-      trailing: IconButton(onPressed: (){},icon: const Icon(Iconsax.edit,color: BTColors.white)),
+      trailing: IconButton(onPressed: onPressed,icon: const Icon(Iconsax.edit,color: BTColors.white)),
 
     );
   }

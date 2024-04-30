@@ -1,12 +1,13 @@
 import 'package:be_trendy/common/widgets/appbar/appbar.dart';
 import 'package:be_trendy/common/widgets/icons/circular_icon.dart';
 import 'package:be_trendy/common/widgets/layouts/grid_layout.dart';
-import 'package:be_trendy/common/widgets/products.cart/product_cards/product_card_vertical.dart';
 import 'package:be_trendy/features/shop/screens/home/home.dart';
 import 'package:be_trendy/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+
+import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});
 

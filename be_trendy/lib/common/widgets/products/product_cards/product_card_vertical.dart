@@ -1,8 +1,10 @@
 import 'package:be_trendy/common/widgets/images/BT_rounded_image.dart';
+import 'package:be_trendy/features/shop/screens/product_details/product_detail.dart';
 import 'package:be_trendy/utils/constants/image_strings.dart';
 import 'package:be_trendy/utils/constants/sizes.dart';
 import 'package:be_trendy/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../utils/constants/colors.dart';
@@ -21,7 +23,7 @@ class BTProductCardVertical extends StatelessWidget {
     final dark = BTHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: (){},
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -29,7 +31,8 @@ class BTProductCardVertical extends StatelessWidget {
           boxShadow: [BTShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(BTSizes.productImageRadius),
           //color: BTHelperFunctions.isDarkMode(context) ? BTColors.darkerGrey : BTColors.white,
-          color: dark ? BTColors.dark : BTColors.light,
+          color: dark ? BTColors.darkerGrey : BTColors.white,
+          //color: dark ? BTColors.dark : BTColors.light,
         ),
         child: Column(
           children: [
@@ -41,7 +44,7 @@ class BTProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   const BTRoundedImage(
-                    imageUrl: BTImages.productImage33,
+                    imageUrl: BTImages.productImage332,
                     applyImageRadius: true,
                   ),
       

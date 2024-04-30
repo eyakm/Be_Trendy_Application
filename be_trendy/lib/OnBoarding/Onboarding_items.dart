@@ -7,23 +7,23 @@ class OnboardingItems{
     OnboardingInfo(
         title: "Wide Selection",
         descriptions: "Explore different styles, brands, and sizes that may not be available to you locally.",
-        image: "assets/onboarding1.gif"),
+        image: "onBoardingImage1"),
 
     OnboardingInfo(
         title: "Time Saving",
         descriptions: "No need to travel to physical store no more, find parking, and wait in line at checkout counters.\n With just a few clicks, shoppers can quickly find and purchase the items they need.",
         image: "assets/onboarding2.gif"),
 
-    OnboardingInfo(
+    /*OnboardingInfo(
         title: "Be Trendy",
         descriptions: "keep up with the latest fashion trends out there .",
         image: "assets/onboarding3.gif"),
-
-    OnboardingInfo(
+*/
+    /*OnboardingInfo(
         title: "Convenience ",
         descriptions: "browse and purchase clothes from the comfort of your home, with a new shopping experience .",
         image: "assets/onboarding4.gif"),
-
+*/
 
     OnboardingInfo(
         title: "discounts ",

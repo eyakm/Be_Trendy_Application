@@ -2,7 +2,7 @@ import 'package:be_trendy/common/widgets/appbar/appbar.dart';
 import 'package:flutter/material.dart';
 
 
-import '../../../../../common/widgets/products.cart/cart_menu_icon.dart';
+import '../../../../../common/widgets/products/cart/cart_menu_icon.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
 

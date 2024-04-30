@@ -9,7 +9,8 @@ class BTColors{
 
   // App Basic Colors
   static const Color primary = Color(0xff1b920a);
-  static const Color secondary = Color(0xFF4b68ff);
+  static const Color secondary = Color(0xff93e08b);
+  // static const Color secondary = Color(0xFF4b68ff);
   static const Color accent = Color(0xff70cc63);
   static const Color primaryColor = Color(0xff1b920a);
 

@@ -85,6 +85,10 @@ class BTImages {
   static const String productImage31 = "assets/images/products/dresses/Scarlet Darkness Women 2024 Summer Dress Square Neck Sleeveless High Low Fairy Dress Steampunk Dress.png";
   static const String productImage32 = "assets/images/products/dresses/Verdusa Women's Long Sleeve Sweetheart Neck Lantern Sleeve Ruched Bust Ruffle Trim Mini Dress.png";
   static const String productImage33 = "assets/images/products/dresses/Wedtrend Women's 1950s Vintage Plaids Audrey Dress Sleeveless Spaghetti A-Line Short Cocktail Swing Dress.png";
+  static const String productImage332 = "assets/images/products/dresses/Wedtrend Women's 1950s Vintage Plaids Audrey Dress Sleeveless Spaghetti A-Line Short Cocktail Swing Dress22.jpg";
+  static const String productImage33blue = "assets/images/products/dresses/audreyBlue.jpg";
+  static const String testing = "assets/images/products/dresses/png-clipart-dress-formal-wear-gown-prom-clothing-gray-evening-dress-material-purple-party-dress.png";
+  static const String productImage33red = "assets/images/products/dresses/Red Plaid Halter 1950s Swing Dress.jpg";
 
 
   // ACCESSORY

@@ -1,9 +1,11 @@
 import 'package:be_trendy/common/widgets/appbar/appbar.dart';
 import 'package:be_trendy/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:be_trendy/common/widgets/texts/section_heading.dart';
+import 'package:be_trendy/features/personalization/screens/profile/profile.dart';
 import 'package:be_trendy/utils/constants/colors.dart';
 import 'package:be_trendy/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/list_tiles/settings_menu_tile.dart';
@@ -24,7 +26,7 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(height: BTSizes.spaceBtwSections),
 
                 //User Profile Card
-                 const BTUserProfileTile(),
+                  BTUserProfileTile(onPressed: () => Get.to(() => const ProfileScreen())),
                 const SizedBox(height: BTSizes.spaceBtwSections),
 
 

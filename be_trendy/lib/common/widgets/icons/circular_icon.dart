@@ -36,7 +36,7 @@ class BTCircularIcon extends StatelessWidget {
         color: backgroundColor != null
             ? backgroundColor!
             : BTHelperFunctions.isDarkMode(context)
-                ? BTColors.black.withOpacity(8.9)
+                ? BTColors.black.withOpacity(0.9)
                 : BTColors.white.withOpacity(0.9),
       ),
       child: IconButton(

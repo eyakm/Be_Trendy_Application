@@ -1,6 +1,7 @@
 import 'package:be_trendy/common/widgets/appbar/appbar.dart';
 import 'package:be_trendy/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:be_trendy/common/widgets/texts/section_heading.dart';
+import 'package:be_trendy/features/personalization/screens/address/address.dart';
 import 'package:be_trendy/features/personalization/screens/profile/profile.dart';
 import 'package:be_trendy/utils/constants/colors.dart';
 import 'package:be_trendy/utils/constants/sizes.dart';
@@ -43,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
                   const BTSectionHeading(title: "Account Settings", showActionButton: false),
                   const SizedBox(height: BTSizes.spaceBtwItems),
 
-                  BTSettingsMenuTile(icon: Iconsax.safe_home, title: "My Addresses", subtitle: "Set your delivery address",onTap: (){}),
+                  BTSettingsMenuTile(icon: Iconsax.safe_home, title: "My Addresses", subtitle: "Set your delivery address",onTap: () => Get.to(() => const UserAddressScreen())),
                   BTSettingsMenuTile(icon: Iconsax.shopping_cart, title: "My Cart", subtitle: "Add, remove products and move to checkout",onTap: (){}),
                   BTSettingsMenuTile(icon: Iconsax.bag_tick, title: "My Orders", subtitle: "In-progress and complete Orders",onTap: (){}),
                   BTSettingsMenuTile(icon: Iconsax.bank, title: "Bank Account", subtitle: "Withdraw balance to registered bank account",onTap: (){}),

@@ -1,13 +1,8 @@
 import 'package:be_trendy/common/widgets/appbar/appbar.dart';
-import 'package:be_trendy/features/shop/screens/product_reviews/widgets/progress_indicator_and_rating.dart';
 import 'package:be_trendy/features/shop/screens/product_reviews/widgets/rating_progress_indicator.dart';
 import 'package:be_trendy/features/shop/screens/product_reviews/widgets/user_review_card.dart';
-import 'package:be_trendy/utils/constants/colors.dart';
 import 'package:be_trendy/utils/constants/sizes.dart';
-import 'package:be_trendy/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/products/ratings/rating_indicator.dart';
 class ProductReviewsScreen extends StatelessWidget {

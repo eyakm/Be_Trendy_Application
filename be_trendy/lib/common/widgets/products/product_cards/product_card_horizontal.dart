@@ -10,7 +10,6 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../../styles/shadows.dart';
 import '../../icons/circular_icon.dart';
 
 class BTProductCardHorizontal extends StatelessWidget {

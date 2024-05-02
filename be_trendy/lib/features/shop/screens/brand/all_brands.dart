@@ -1,11 +1,9 @@
 import 'package:be_trendy/common/widgets/appbar/appbar.dart';
 import 'package:be_trendy/common/widgets/layouts/grid_layout.dart';
-import 'package:be_trendy/common/widgets/products/sortable/sortable_products.dart';
 import 'package:be_trendy/common/widgets/texts/section_heading.dart';
 import 'package:be_trendy/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../common/widgets/brands/BT_Brand_Card.dart';
 import 'brand_products.dart';

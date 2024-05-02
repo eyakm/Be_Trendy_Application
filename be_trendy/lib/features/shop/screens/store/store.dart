@@ -8,10 +8,12 @@ import 'package:be_trendy/utils/constants/colors.dart';
 import 'package:be_trendy/utils/constants/sizes.dart';
 import 'package:be_trendy/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/widgets/appbar/tabbar.dart';
 import '../../../../common/widgets/brands/BT_Brand_Card.dart';
 import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
+import '../brand/all_brands.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -47,7 +49,7 @@ class StoreScreen extends StatelessWidget {
                     const SizedBox(height: BTSizes.spaceBtwSections),
 
                     //Featured Brands
-                    BTSectionHeading(title: 'Featured Brands', onPressed: (){}),
+                    BTSectionHeading(title: 'Featured Brands', onPressed: ()=> Get.to(() => const AllBrandsScreen())),
                     const SizedBox(height: BTSizes.spaceBtwItems / 1.5),
                     BTGridLayout(itemCount: 4,mainAxisExtent: 80, itemBuilder: (_ ,index) {
                       return const BTBrandCard(showBorder : false);

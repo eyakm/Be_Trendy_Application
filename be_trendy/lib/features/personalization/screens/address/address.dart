@@ -1,5 +1,4 @@
 import 'package:be_trendy/common/widgets/appbar/appbar.dart';
-import 'package:be_trendy/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:be_trendy/features/personalization/screens/address/add_new_address.dart';
 import 'package:be_trendy/features/personalization/screens/address/widgets/single_address.dart';
 import 'package:be_trendy/utils/constants/colors.dart';

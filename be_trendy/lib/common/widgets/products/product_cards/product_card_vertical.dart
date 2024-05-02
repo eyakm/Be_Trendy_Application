@@ -101,6 +101,8 @@ class BTProductCardVertical extends StatelessWidget {
                   padding: EdgeInsets.only(left: BTSizes.sm),
                   child: BTProductPriceText(price: "250.0"),
                 ),
+
+                // Add to Cart
                 Container(
                   decoration: const  BoxDecoration(
                     color: BTColors.dark,

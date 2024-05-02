@@ -48,7 +48,7 @@ final void Function()? onTap;
                 mainAxisSize: MainAxisSize.min, // to take only the minimum space
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const BTBrandTitleWithVerifiedIcon(title: 'FashionOne',brandTextSize: TextSizes.large),
+                  const BTBrandTitleWithVerifiedIcon(title: 'H&M',brandTextSize: TextSizes.large),
                   Text('77 products',overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.labelMedium,)
                 ],

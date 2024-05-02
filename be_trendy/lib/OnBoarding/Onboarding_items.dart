@@ -4,10 +4,10 @@ import 'Onboarding_info.dart';
 
 class OnboardingItems{
   List<OnboardingInfo> items = [
-    OnboardingInfo(
+/*    OnboardingInfo(
         title: "Wide Selection",
         descriptions: "Explore different styles, brands, and sizes that may not be available to you locally.",
-        image: "onBoardingImage1"),
+        image: "onBoardingImage1"),*/
 
     OnboardingInfo(
         title: "Time Saving",
@@ -19,11 +19,11 @@ class OnboardingItems{
         descriptions: "keep up with the latest fashion trends out there .",
         image: "assets/onboarding3.gif"),
 */
-    /*OnboardingInfo(
+    OnboardingInfo(
         title: "Convenience ",
         descriptions: "browse and purchase clothes from the comfort of your home, with a new shopping experience .",
         image: "assets/onboarding4.gif"),
-*/
+
 
     OnboardingInfo(
         title: "discounts ",

@@ -7,8 +7,11 @@ import 'package:be_trendy/features/shop/screens/product_details/widgets/rating_s
 import 'package:be_trendy/utils/constants/sizes.dart';
 import 'package:be_trendy/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
+
+import '../product_reviews/product_reviews.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({super.key});
@@ -39,7 +42,7 @@ class ProductDetailScreen extends StatelessWidget {
                   const SizedBox(height: BTSizes.spaceBtwSections),
 
                   // Checkout Button
-                  SizedBox(width: double.infinity ,child: ElevatedButton(onPressed: (){}, child: Text("Checkout"))),
+                  SizedBox(width: double.infinity ,child: ElevatedButton(onPressed: (){}, child: const Text("Checkout"))),
                   const SizedBox(height: BTSizes.spaceBtwSections),
 
 
@@ -61,8 +64,8 @@ class ProductDetailScreen extends StatelessWidget {
                   const SizedBox(height: BTSizes.spaceBtwItems),
                   Row(
                     children: [
-                      BTSectionHeading(title: "Reviews (199)", onPressed: (){}, showActionButton: false),
-                      IconButton(icon:const Icon(Iconsax.arrow_right_3, size: 18) ,onPressed: (){}),
+                      BTSectionHeading(title: "Reviews (199)", onPressed: () {}, showActionButton: false),
+                      IconButton(icon:const Icon(Iconsax.arrow_right_3, size: 18) ,onPressed: ()=> Get.to(() => const ProductReviewsScreen())),
                     ],
                   ),
                   const SizedBox(height: BTSizes.spaceBtwSections),

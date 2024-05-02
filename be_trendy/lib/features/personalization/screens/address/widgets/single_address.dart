@@ -19,7 +19,7 @@ class BTSingleAddress extends StatelessWidget {
       showBorder: true,
       backgroundColor: selectedAddress ? BTColors.primary.withOpacity(0.5) : Colors.transparent ,
       borderColor: selectedAddress ? Colors.transparent : dark ? BTColors.darkerGrey : BTColors.grey,
-      margin: EdgeInsets.only(bottom: BTSizes.spaceBtwItems),
+      margin: const EdgeInsets.only(bottom: BTSizes.spaceBtwItems),
       child: Stack(
         children: [
           Positioned(

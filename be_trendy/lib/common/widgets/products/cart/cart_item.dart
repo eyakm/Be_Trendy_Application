@@ -29,7 +29,7 @@ class BTCardItem extends StatelessWidget {
         ),
 
 
-        SizedBox(width: BTSizes.spaceBtwItems),
+        const SizedBox(width: BTSizes.spaceBtwItems),
 
         // Title, Price, & size
         Flexible(

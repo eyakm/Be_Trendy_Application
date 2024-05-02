@@ -8,7 +8,7 @@ class AddNewAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: BTAppBar(showBackArrow: true,title: Text("Add new Address")),
+      appBar: const BTAppBar(showBackArrow: true,title: Text("Add new Address")),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(BTSizes.defaultSpace),
@@ -41,7 +41,7 @@ class AddNewAddressScreen extends StatelessWidget {
                   const SizedBox(height: BTSizes.spaceBtwInputFields),
                   TextFormField(decoration: const InputDecoration(prefixIcon: Icon(Iconsax.global),labelText: "Country")),
                   const SizedBox(height: BTSizes.defaultSpace),
-                  SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: Text("Save")),)
+                  SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: const Text("Save")),)
                 ],
               )
           ),

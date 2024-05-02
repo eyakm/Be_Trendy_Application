@@ -43,7 +43,7 @@ class BTCouponCode extends StatelessWidget {
                       side: BorderSide(color: Colors.grey.withOpacity(0.1))
                   ),
                   onPressed: () {},
-                  child: Text('Apply'))),
+                  child: const Text('Apply'))),
         ],
       ),
     );

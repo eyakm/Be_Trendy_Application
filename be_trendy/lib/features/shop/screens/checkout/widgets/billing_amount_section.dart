@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:be_trendy/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:be_trendy/common/widgets/texts/section_heading.dart';
-import 'package:be_trendy/utils/constants/image_strings.dart';
 import 'package:be_trendy/utils/constants/sizes.dart';
-import 'package:be_trendy/utils/helpers/helper_functions.dart';
-import 'package:flutter/material.dart';
 
-import '../../../../../utils/constants/colors.dart';
 class BTBillingAmountSection extends StatelessWidget {
   const BTBillingAmountSection({super.key});
 

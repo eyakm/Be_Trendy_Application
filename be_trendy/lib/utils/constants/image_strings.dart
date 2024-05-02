@@ -89,6 +89,9 @@ class BTImages {
   static const String productImage33blue = "assets/images/products/dresses/audreyBlue.jpg";
   static const String testing = "assets/images/products/dresses/png-clipart-dress-formal-wear-gown-prom-clothing-gray-evening-dress-material-purple-party-dress.png";
   static const String productImage33red = "assets/images/products/dresses/Red Plaid Halter 1950s Swing Dress.jpg";
+  static const String productImage34 = "assets/images/products/dresses/white-offshoulder-elegant-dress.jpg";
+  static const String productImage35 = "assets/images/products/dresses/cocktail-dress.jpg";
+  static const String productImage36 = "assets/images/products/dresses/red-elegant-dress.jpg";
 
 
   // ACCESSORY

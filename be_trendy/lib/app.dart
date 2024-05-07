@@ -1,8 +1,10 @@
+import 'package:be_trendy/bindings/general_bindings.dart';
+import 'package:be_trendy/routes/app_routes.dart';
+import 'package:be_trendy/utils/constants/colors.dart';
 import 'package:be_trendy/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'OnBoarding/Onboarding_view.dart';
 
 
 class App extends StatelessWidget {
@@ -13,11 +15,19 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: BTAppTheme.lightTheme,
       darkTheme: BTAppTheme.darkTheme,
-      debugShowCheckedModeBanner: false,
-      home: /*onboarding? const Home() :*/ const OnboardingView(),
+      initialBinding: GeneralBindings(),
+      getPages: AppRoutes.pages,
+      // debugShowCheckedModeBanner: false,
+
+        // Show loader or Circular Progress Indicator  meanwhile Authentication Repository is deciding to show relevant screen
+      home: const Scaffold(backgroundColor: BTColors.primary, body: Center(child: CircularProgressIndicator(color: Colors.white)))
+
+      // const OnboardingScreen(),
+      /*home: onboarding? const Home() :*/
 
       /*body: Center(
 
@@ -30,6 +40,8 @@ class App extends StatelessWidget {
         ),
 
       ),*/
+
+
     );
   }
 }

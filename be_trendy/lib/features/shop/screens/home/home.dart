@@ -2,7 +2,6 @@ import 'package:be_trendy/features/shop/screens/all_products/all_products.dart';
 import 'package:be_trendy/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:be_trendy/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:be_trendy/features/shop/screens/home/widgets/promo_slider.dart';
-import 'package:be_trendy/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,12 +11,14 @@ import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/sizes.dart';
+import '../../controllers/product_controller.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ProductController());
     //const BTHomeAppBar();
     return  Scaffold(
       body: SingleChildScrollView(
@@ -64,8 +65,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
 
                     // Promo Slider
-                    const BTPromoSlider(
-                      banners: [BTImages.promoBanner1, BTImages.promoBanner2, BTImages.promoBanner3,],),
+                    const BTPromoSlider(),
                     const SizedBox(height: BTSizes.spaceBtwSections,),
 
 

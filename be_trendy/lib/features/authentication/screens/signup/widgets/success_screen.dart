@@ -1,10 +1,10 @@
 import 'package:be_trendy/common/styles/spacing_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/constants/text_strings.dart';
-import '../../../../utils/helpers/helper_functions.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/text_strings.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key, required this.image, required this.title, required this.subtitle, required this.onPressed});
@@ -20,9 +20,11 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
               /// Image
-              Image(
+               Lottie.asset(image, width: MediaQuery.of(context).size.width * 0.6),
+
+             /* Image(
                   image: AssetImage(image),
-                  width: BTHelperFunctions.screenWidth() * 0.6),
+                  width: BTHelperFunctions.screenWidth() * 0.6),*/
               const SizedBox(height: BTSizes.spaceBtwSections),
 
               /// Title & Subtitle

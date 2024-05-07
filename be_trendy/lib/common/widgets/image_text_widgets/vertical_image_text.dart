@@ -1,3 +1,4 @@
+import 'package:be_trendy/common/widgets/images/BT_circular_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
@@ -10,6 +11,7 @@ class BTVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = BTColors.white,
+    this.isNetworkImage = true,
     this.backgroundColor ,
     this.onTap,
   });
@@ -18,6 +20,7 @@ class BTVerticalImageText extends StatelessWidget {
   final Color textColor;
   final Color? backgroundColor;
   final void Function()? onTap;
+  final bool isNetworkImage;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,8 @@ class BTVerticalImageText extends StatelessWidget {
         padding: const EdgeInsets.only(right: BTSizes.spaceBtwItems),
         child: Column(
           children: [
-          Container(
+            BTCircularImage(image: image, fit: BoxFit.fitWidth, padding: BTSizes.sm * 1.4,isNetworkImage: isNetworkImage,backgroundColor: backgroundColor,overlayColor: dark? BTColors.light: BTColors.dark),
+          /*Container(
           width: 56,
           height: 56,
           padding: const EdgeInsets.all(BTSizes.sm),
@@ -39,10 +43,10 @@ class BTVerticalImageText extends StatelessWidget {
           child: Center(
             child: Image(image: AssetImage(image),fit: BoxFit.cover, color: dark ? BTColors.light : BTColors.dark),
           ),
-        ),
+        ),*/
 
         // Text
-         const SizedBox(height: BTSizes.spaceBtwItems / 2 ),
+          SizedBox(height: BTSizes.spaceBtwItems / 2 ),
           SizedBox(
           width: 55,
           child: Text(

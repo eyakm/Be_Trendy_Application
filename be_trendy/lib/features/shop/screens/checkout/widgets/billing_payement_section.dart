@@ -21,13 +21,14 @@ class BTBillingPaymentSection extends StatelessWidget {
           children: [
             BTRoundedContainer(
               width: 60,
-              height: 30,
+              height: 60,
               backgroundColor: dark ? BTColors.light : BTColors.white ,
               padding: const EdgeInsets.all(BTSizes.sm),
-              child: const Image(image: AssetImage(BTImages.paypal), fit: BoxFit.contain),
+              //child: const Image(image: AssetImage(BTImages.paypal), fit: BoxFit.contain),
+              child: const Image(image: AssetImage(BTImages.e_dinar), fit: BoxFit.contain),
             ),
             const SizedBox(height: BTSizes.spaceBtwItems / 2),
-            Text("Paypal", style: Theme.of(context).textTheme.bodyLarge),
+            Text("E-DINAR", style: Theme.of(context).textTheme.bodyLarge),
           ],
         )
       ],

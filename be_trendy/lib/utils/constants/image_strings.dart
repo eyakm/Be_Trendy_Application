@@ -13,6 +13,7 @@ class BTImages {
 //-- Social Logos
   static const String google = "assets/logos/google-icon.png";
   static const String facebook = "assets/logos/facebook-icon.png";
+  static const String zara_logo = "assets/icons/brands/zara-logo.png";
 
 
 // -- OnBoarding Images
@@ -26,6 +27,13 @@ class BTImages {
   static const String deliveredInPlaneIllustration = "";
   static const String deliveredEmailIllustration = "assets/images/email_delivered.gif";
   static const String verifyIllustration = "";
+  static const String docerAnimation = "assets/images/animations/141594-animation-of-docer.json";
+  static const String successfullRegisterAnimation = "assets/images/animations/72462-check-register.json";
+  static const String thankYouAnimation = "assets/images/animations/104368-thank-you.json";
+  static const String paymentSuccessfullAnimation = "assets/images/animations/120978-payment-successful.json";
+  static const String loadingJuggleAnimation = "assets/images/animations/141397-loading-juggle.json";
+  static const String cloudUploadingAnimation = "assets/images/animations/cloud-uploading-animation.json";
+  static const String loaderAnimation = "assets/images/animations/loader-animation.json";
 
 
 // Category Icons
@@ -116,6 +124,7 @@ class BTImages {
   static const String creditCard = "assets/icons/payment_methods/credit-card.png";
   static const String masterCard = "assets/icons/payment_methods/master-card.png";
   static const String paypal = "assets/icons/payment_methods/paypal.png";
+  static const String e_dinar = "assets/logos/e-dinar_logo-1.png";
   static const String visa = "assets/icons/payment_methods/visa.png";
   static const String paystack = "assets/icons/payment_methods/paystack.png";
   static const String paytm = "assets/icons/payment_methods/paytm.png";

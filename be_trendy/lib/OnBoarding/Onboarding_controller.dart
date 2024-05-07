@@ -1,22 +1,24 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../features/authentication/screens/login.widgets/login.dart';
+import '../features/authentication/screens/login/login.dart';
 import '../utils/constants/colors.dart';
 import '../utils/helpers/helper_functions.dart';
 import 'Onboarding_items.dart';
 
-class OnboardingView extends StatefulWidget {
-  const OnboardingView({super.key});
+class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
 
   @override
-  State<OnboardingView> createState() => _OnboardingViewState();
+  State<OnboardingScreen> createState() => _OnboardingViewState();
 }
 
-class _OnboardingViewState extends State<OnboardingView> {
+class _OnboardingViewState extends State<OnboardingScreen> {
   final controller = OnboardingItems();
   final pageController = PageController();
 
@@ -109,7 +111,24 @@ class _OnboardingViewState extends State<OnboardingView> {
 
             //After we press get started button this onboarding value become true
             // same key
+
+
             if(!mounted)return;
+
+
+            final storage = GetStorage();
+
+            if(kDebugMode){
+              print("======= GET STORAGE getStarted =====");
+              print(storage.read("IsFirstTime"));
+            }
+            storage.write("IsFirstTime", false);
+            if(kDebugMode){
+              print("======= GET STORAGE getStarted =====");
+              print(storage.read("IsFirstTime"));
+            }
+
+
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginScreen()));
           },
           child: const Text("Get started",style: TextStyle(color: Colors.white),)),

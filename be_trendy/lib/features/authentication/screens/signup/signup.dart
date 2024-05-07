@@ -1,4 +1,4 @@
-import 'package:be_trendy/features/authentication/screens/signup.widgets/signup_form.dart';
+import 'package:be_trendy/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

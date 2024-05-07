@@ -3,6 +3,7 @@ import 'package:be_trendy/common/widgets/appbar/appbar.dart';
 import 'package:be_trendy/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:be_trendy/common/widgets/layouts/grid_layout.dart';
 import 'package:be_trendy/common/widgets/texts/section_heading.dart';
+import 'package:be_trendy/features/shop/controllers/category_controller.dart';
 import 'package:be_trendy/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:be_trendy/utils/constants/colors.dart';
 import 'package:be_trendy/utils/constants/sizes.dart';
@@ -20,8 +21,9 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final categories = CategoryController.instance.featuredCategories;
     return  DefaultTabController(
-      length: 6,
+      length: categories.length,
       child: Scaffold(
         appBar: BTAppBar(
           title: Text('Store', style: Theme.of(context).textTheme.headlineMedium),
@@ -61,30 +63,17 @@ class StoreScreen extends StatelessWidget {
               ),
 
               // Tabs
-              bottom:  const BTTabBar(
-                  tabs: [
-                    Tab(child: Text('Dresses')),
-                    Tab(child: Text('Accessories')),
-                    Tab(child: Text('Shoes')),
-                    Tab(child: Text('Cosmetics')),
-                    Tab(child: Text('Sports')),
-                    Tab(child: Text('Shirts')),
-
-                  ],),
+              bottom:  BTTabBar(
+                  tabs: categories.map((category) => Tab(child: Text(category.name))).toList()
+              ),
             ),
           ];
         },
 
-          body: const TabBarView(
-            children: [
-              BTCategoryTab(),
-              BTCategoryTab(),
-              BTCategoryTab(),
-              BTCategoryTab(),
-              BTCategoryTab(),
-              BTCategoryTab(),
+          body:  TabBarView(
+            children:
+             categories.map((category) => BTCategoryTab(category: category)).toList()
 
-            ],
           ),
         ),
       ),

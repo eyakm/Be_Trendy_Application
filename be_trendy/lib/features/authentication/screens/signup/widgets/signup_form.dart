@@ -1,12 +1,13 @@
-import 'package:be_trendy/features/authentication/screens/signup.widgets/verify_email.dart';
+import 'package:be_trendy/features/authentication/controllers/signup/signup_controller.dart';
+import 'package:be_trendy/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
+import 'package:be_trendy/utils/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/constants/text_strings.dart';
-import '../../../../utils/helpers/helper_functions.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/text_strings.dart';
 
 class BTSignupForm extends StatelessWidget {
   const BTSignupForm({
@@ -18,8 +19,10 @@ class BTSignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = BTHelperFunctions.isDarkMode(context);
+    // final dark = BTHelperFunctions.isDarkMode(context);
+    final controller = Get.put(SignupController());
     return Form(
+      key: controller.signupFormKey,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: BTSizes.spaceBtwSections),
         child: Column(
@@ -29,6 +32,8 @@ class BTSignupForm extends StatelessWidget {
                 // first name
                 Expanded(
                     child: TextFormField(
+                      controller: controller.firstName,
+                      validator: (value) => BTValidator.validateEmptyText("First name", value),
                       expands: false,
                       decoration: const InputDecoration(labelText: BTTexts.firstName, prefixIcon: Icon(Iconsax.user)),
                     )
@@ -39,6 +44,8 @@ class BTSignupForm extends StatelessWidget {
                 // last name
                 Expanded(
                     child: TextFormField(
+                      controller: controller.lastName,
+                      validator: (value) => BTValidator.validateEmptyText("Last name", value),
                       expands: false,
                       decoration: const InputDecoration(labelText: BTTexts.LastName, prefixIcon: Icon(Iconsax.user)),
                     )
@@ -51,6 +58,8 @@ class BTSignupForm extends StatelessWidget {
 
             // username
             TextFormField(
+              controller: controller.username,
+              validator: (value) => BTValidator.validateEmptyText("Username", value),
               expands: false,
               decoration: const InputDecoration(labelText: BTTexts.username, prefixIcon: Icon(Iconsax.user_edit)),
             ),
@@ -59,6 +68,8 @@ class BTSignupForm extends StatelessWidget {
 
             // Email
             TextFormField(
+              controller: controller.email,
+              validator: (value) => BTValidator.validateEmail(value),
               expands: false,
               decoration: const InputDecoration(labelText: BTTexts.email, prefixIcon: Icon(Iconsax.direct)),
             ),
@@ -67,6 +78,8 @@ class BTSignupForm extends StatelessWidget {
 
             // Phone number
             TextFormField(
+              controller: controller.phoneNumber,
+              validator: (value) => BTValidator.validatePhoneNumber(value),
               expands: false,
               decoration: const InputDecoration(labelText: BTTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
             ),
@@ -74,48 +87,35 @@ class BTSignupForm extends StatelessWidget {
             const SizedBox(height: BTSizes.spaceBtwInputFields),
 
             // Password
-            TextFormField(
-              obscureText: true,
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.password_check),
-                labelText: BTTexts.password,
-                suffixIcon: Icon(Iconsax.eye_slash),
+            Obx(
+              () => TextFormField(
+                controller: controller.password,
+                validator: (value) => BTValidator.validatePassword(value),
+                //obscureText: true,
+                obscureText: controller.hidePassword.value,
+                decoration:  InputDecoration(
+                  prefixIcon:const  Icon(Iconsax.password_check),
+                  labelText: BTTexts.password,
+                  suffixIcon: IconButton(
+                      onPressed: () => controller.hidePassword.value =
+                          !controller.hidePassword.value,
+                      icon: Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),
+                  ),
+                ),
               ),
             ),
 
             const SizedBox(height: BTSizes.spaceBtwInputFields),
 
             // Terms & conditions check box
-            Row(
-              children: [
-                SizedBox(width: 24, height: 24, child: Checkbox(value: true, onChanged: (value){})),// here  i wrapped the checkbox into a sizedBox to avoid the extra space at the left of the screen
-                const SizedBox(width: BTSizes.spaceBtwItems),
-                Text.rich(
-                  TextSpan(
-                      children: [
-                        TextSpan(text: BTTexts.iAgreeTo, style: Theme.of(context).textTheme.bodySmall),
-                        TextSpan(text: '${BTTexts.privacyPolicy} ', style: Theme.of(context).textTheme.bodyMedium!.apply(
-                          color: dark ? BTColors.white : BTColors.primary,
-                          decoration: TextDecoration.underline,
-                          decorationColor: dark ? BTColors.white : BTColors.primary,
-                        )),
-                        TextSpan(text: BTTexts.and, style: Theme.of(context).textTheme.bodySmall),
-                        TextSpan(text: BTTexts.termsofUse, style: Theme.of(context).textTheme.bodyMedium!.apply(
-                          color: dark ? BTColors.white : BTColors.primary,
-                          decoration: TextDecoration.underline,
-                          decorationColor: dark ? BTColors.white : BTColors.primary,
-                        )),
-                      ]
-                  ),),
-              ],
-            ),
+            const BTTermsAndConditionsCheckbox(),
 
             const SizedBox(height: BTSizes.spaceBtwSections),
             /// Sign up Button
-            SizedBox(width: double.infinity, child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                      backgroundColor: BTColors.primary),
-                onPressed: () => Get.to(()=> const VerifyEmailScreen()),
+            SizedBox(width: double.infinity,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: BTColors.primary),
+                onPressed: () => controller.signup(),
                 child: const Text(BTTexts.createAccount),
             ),
             ),
@@ -128,3 +128,4 @@ class BTSignupForm extends StatelessWidget {
     );
   }
 }
+

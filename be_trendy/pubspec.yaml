@@ -21,6 +21,7 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.2.3 <4.0.0'
 
+
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -38,9 +39,14 @@ dependencies:
   http: ^1.1.0
   intl: ^0.19.0
   logger: ^2.0.1
+  lottie: ^3.1.0
   url_launcher: ^6.1.12
-  flutter_native_splash: ^2.3.11
-
+  flutter_native_splash: ^2.3.10
+  #connectivity_plus: ^6.0.3
+  connectivity_plus: ^5.0.1
+  image_picker: ^1.0.8
+  shimmer: ^3.0.0
+  cached_network_image: ^3.3.1
 
   #Icons
   iconsax: ^0.0.8
@@ -59,6 +65,15 @@ dependencies:
   readmore: ^3.0.0
   carousel_slider: ^4.2.1
   flutter_rating_bar: ^4.0.1
+
+  # Firebase
+  firebase_core:
+  firebase_auth:
+  #firebase_firestore:
+  cloud_firestore:
+  firebase_storage: ^11.6.9
+
+
 
 
 

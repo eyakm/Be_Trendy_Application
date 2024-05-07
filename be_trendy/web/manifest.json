@@ -5,9 +5,10 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "An e-commercr application",
+    "description": "An e-commerce application",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
+
     "icons": [
         {
             "src": "icons/Icon-192.png",

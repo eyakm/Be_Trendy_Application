@@ -1,5 +1,4 @@
 import 'package:be_trendy/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:be_trendy/features/authentication/screens/signup.widgets/success_screen.dart';
 import 'package:be_trendy/features/shop/screens/cart/widgets/cart_items.dart';
 import 'package:be_trendy/features/shop/screens/checkout/widgets/billing_address_section.dart';
 import 'package:be_trendy/features/shop/screens/checkout/widgets/billing_amount_section.dart';
@@ -14,6 +13,7 @@ import '../../../../common/widgets/products/cart/coupon_widget.dart';
 import '../../../../navigation_menu.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
+import '../../../authentication/screens/signup/widgets/success_screen.dart';
 class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({super.key});
 
@@ -78,7 +78,7 @@ class CheckoutScreen extends StatelessWidget {
           onPressed: () => Get.to(() => SuccessScreen(
               image: BTImages.successfulPaymentIcon,
               title: "Successfull Payment",
-              subtitle: "Your order will be shippef soon ^_^ ! ",
+              subtitle: "Your order will be shipped soon ^_^ ! ",
               onPressed: () => Get.offAll(() => const NavigationMenu()),
           ),
 
